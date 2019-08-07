@@ -3,10 +3,12 @@ package codewars;
 public class UniqueNumber {
 
     public static void main(String[] args) {
-
         System.out.println(findUniq(new double[] {1,2,1,1}));
-
     }
+
+            //Find the unique number
+        //There is an array with some numbers. All numbers are equal except for one. Try to find it!
+        //new double[]{ 1, 1, 1, 2, 1, 1 }); // => 2
 
     public static double findUniq(double arr[]) {
         double x = arr[0];
