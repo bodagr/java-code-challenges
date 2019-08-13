@@ -20,8 +20,8 @@ public class DetectPangram {
 
                 //#1
     public static boolean check (String sentence) {
-        sentence = sentence.replaceAll("[^a-zA-Z]", "");
-        char [] str = sentence.toLowerCase().toCharArray();
+        sentence = sentence.toLowerCase().replaceAll("[^a-zA-Z]", "");
+        char [] str = sentence.toCharArray();
         Map <Character, String> map = new HashMap<>();
 
         if (str.length == 0) return true;
