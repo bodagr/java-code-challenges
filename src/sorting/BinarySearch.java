@@ -26,9 +26,9 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         BinarySearch ob = new BinarySearch();
-        int[] arr = {1,3,4,7,8,9,10};
+        int[] arr = {1,2,3,4,5,6,7,8,9,10};
         int n = arr.length;
-        int x = 7;  //number to find
+        int x = 2;  //number to find
         int result = ob.binarySearch(arr, 0, n-1, x);
 
         if (result == -1)
