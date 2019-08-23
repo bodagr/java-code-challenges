@@ -19,7 +19,6 @@ public class BinarySearch {
             return binarySearch(arr, mid+1, r, x);
         }
         return -1;
-
     }
 
 
@@ -28,12 +27,9 @@ public class BinarySearch {
         BinarySearch ob = new BinarySearch();
         int[] arr = {1,2,3,4,5,6,7,8,9,10};
         int n = arr.length;
-        int x = 2;  //number to find
+        int x = 5;  //number to find
         int result = ob.binarySearch(arr, 0, n-1, x);
 
-        if (result == -1)
-            System.out.println("Element not present");
-        else
-            System.out.println("Element found at index: " + result);
+        System.out.println(result == -1 ? "Element not present" : "Element found at index: " + result);
     }
 }
