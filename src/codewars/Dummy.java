@@ -1,23 +1,25 @@
 package codewars;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Dummy {
 
     public static void main(String args[]) {
 
-        SortedSet <String> set = new TreeSet<>();
-        set.add("c");
-        set.add("b");
-        set.add("w");
-        set.add("a");
+        String inp = "Hello my little friend";
+        StringTokenizer tokens = new StringTokenizer(inp);
+        String [] set = new String[tokens.countTokens()];
 
-        set.forEach(System.out::println);
+        int count = 0;
+        while (tokens.hasMoreTokens()) {
+            set[count] = tokens.nextToken();
+            count++;
+        }
+        System.out.println(Arrays.toString(set));
 
-
+        Arrays.stream(set).collect(Collectors.toCollection(LinkedList::new))
+                .descendingIterator()
+                .forEachRemaining(x -> System.out.print(x + " "));
     }
-
 }

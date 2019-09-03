@@ -9,6 +9,7 @@ public class WhichAreIn {
     public static void main(String[] args) {
 
         System.out.println(Arrays.toString(inArray(new String[]{"arp", "live", "strong"}, new String[]{"lively", "alive", "harp", "sharp", "armstrong"})));
+        System.out.println(Arrays.toString(inArray2(new String[]{"arp", "abr", "strong"}, new String[]{"lively", "alive", "harp", "sharp", "armstrong"})));
 
     }
 
@@ -32,7 +33,7 @@ public class WhichAreIn {
         * Don't mutate the inputs.
      */
 
-
+                //#1
     public static String[] inArray (String[] a1, String[] a2) {
 
         SortedSet <String> set = new TreeSet<>();
@@ -43,7 +44,15 @@ public class WhichAreIn {
                     set.add(a1[i]);
             }
         }
-
         return set.toArray(new String[0]);
+    }
+
+
+                //#2 using stream
+    public static String[] inArray2 (String[] a1, String[] a2) {
+        return Arrays.stream(a1)
+                .filter(str -> Arrays.stream(a2).anyMatch(s -> s.contains(str)))
+                .sorted()
+                .toArray(String[]::new);
     }
 }

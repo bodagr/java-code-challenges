@@ -67,7 +67,7 @@ public class _Collection_INFO {
         // Keys not in any particular order, and order liable to change
         Map <String, String> map1 = new HashMap<>();
 
-        // Key sorted in natural order
+        // Key sorted in natural order (1,2,3...., a,b,c.... etc)
         Map <String, String> map2 = new TreeMap<>();
 
         // Keys remain in order added
